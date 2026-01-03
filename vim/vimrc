@@ -1,0 +1,37 @@
+" Plugins
+source ~/.vim/plugins.vim
+
+" Primitive Settings
+
+set nocompatible
+
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set softtabstop=2
+
+set nu
+set cursorline
+set textwidth=100
+set wrap
+set linebreak
+set wrapmargin=2
+
+set showmatch
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set mouse=a
+
+set nobackup
+set noswapfile
+
+set noerrorbells
+
+" Theme
+
+colorscheme onedark
+hi Normal guibg=NONE ctermbg=NONE
