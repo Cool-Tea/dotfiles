@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": [
+    // "hyprland/workspaces",
+    "custom/padding",
+    "custom/lend",
+    "wlr/taskbar",
+    "hyprland/window",
+    "custom/rend",
+    "custom/padding",
+  ],
+  "modules-center": [
+    "custom/padding",
+    "custom/lend",
+    "clock",
+    "custom/rend",
+    "custom/padding",
+  ],
+  "modules-right": [
+    "custom/padding",
+    "custom/lend",
+    "tray",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/rend",
+    "custom/padding",
+  ],
+
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 4
+    },
+    "format": "{id}",
+    "workspace-taskbar": {
+      "enable": false,
+      "format": "{icon}",
+      "icon-size": 18,
+      "on-click-window": "hyprctl dispatch focuswindow address:{address}"
+    }
+  },
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 40,
+    "icon": false
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "spacing": 0,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "sort-by-app-id": true
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "clock": {
+    "timezone": "Asia/Shanghai",
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%R %F}",
+    "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    }
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "battery": {
+    "states": {
+        "good": 90,
+        "warning": 30,
+        "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "interval": 2,
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "⚠ ",
+    "tooltip-format-wifi": "<big><b> {essid}</b></big>\nStrength: <b>{signalStrength}%</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    "tooltip-format-ethernet": " <big><b>{essid}</b></big>\nStrength: <b>{signalStrength}%</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    "tooltip-format-disconnected": "⚠  Disconnected",
+    "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "婢",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol -t 3"
+  },
+
+  "custom/padd": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/lend": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/rend": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+}
