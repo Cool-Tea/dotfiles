@@ -4,11 +4,15 @@
   "height": 30,
 
   "modules-left": [
-    // "hyprland/workspaces",
+    "custom/padding",
+    "custom/lend",
+    "hyprland/workspaces",
+    "custom/rend",
     "custom/padding",
     "custom/lend",
     "wlr/taskbar",
-    "hyprland/window",
+    // "custom/sep",
+    // "hyprland/window",
     "custom/rend",
     "custom/padding",
   ],
@@ -23,6 +27,9 @@
     "custom/padding",
     "custom/lend",
     "tray",
+    "custom/rend",
+    "custom/padding",
+    "custom/lend",
     "network",
     "pulseaudio",
     "backlight",
@@ -35,7 +42,13 @@
     "persistent-workspaces": {
       "*": 4
     },
-    "format": "{id}",
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      // "active": "✦",
+      // "special": "<big><b>✦</b></big>",
+      "default": ""
+    },
     "workspace-taskbar": {
       "enable": false,
       "format": "{icon}",
@@ -45,7 +58,7 @@
   },
   "hyprland/window": {
     "format": "{title}",
-    "max-length": 40,
+    "max-length": 20,
     "icon": false
   },
   "wlr/taskbar": {
@@ -129,6 +142,11 @@
   },
   "custom/rend": {
     "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sep": {
+    "format": "|",
     "interval": "once",
     "tooltip": false
   },
