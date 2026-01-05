@@ -27,8 +27,12 @@ tooltip {
     border-radius: 10px;
     margin: 3px 0px;
     padding: 0px 3px;
-    color: @main-fg;
+    color: @wb-act-bg;
     animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.empty {
+    color: @main-fg;
 }
 
 #workspaces button.active {
