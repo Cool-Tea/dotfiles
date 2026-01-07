@@ -19,6 +19,7 @@
   "modules-center": [
     "custom/padding",
     "custom/lend",
+    "custom/distro",
     "clock",
     "custom/rend",
     "custom/padding",
@@ -73,6 +74,11 @@
   "tray": {
     "icon-size": 18,
     "spacing": 10
+  },
+  "custom/distro": {
+    "format": "󰣇",
+    "interval": "once",
+    "tooltip": false
   },
   "clock": {
     "timezone": "Asia/Shanghai",
