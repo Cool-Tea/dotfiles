@@ -8,28 +8,22 @@
     "custom/lend",
     "hyprland/workspaces",
     "custom/rend",
-    "custom/padding",
     "custom/lend",
     "wlr/taskbar",
     // "custom/sep",
     // "hyprland/window",
     "custom/rend",
-    "custom/padding",
   ],
   "modules-center": [
-    "custom/padding",
     "custom/lend",
     "custom/distro",
     "clock",
     "custom/rend",
-    "custom/padding",
   ],
   "modules-right": [
-    "custom/padding",
     "custom/lend",
     "tray",
     "custom/rend",
-    "custom/padding",
     "custom/lend",
     "network",
     "pulseaudio",
@@ -136,7 +130,7 @@
     "on-click": "pavucontrol -t 3"
   },
 
-  "custom/padd": {
+  "custom/padding": {
     "format": "  ",
     "interval": "once",
     "tooltip": false
