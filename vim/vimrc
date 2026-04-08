@@ -2,7 +2,6 @@
 source ~/.vim/plugins.vim
 
 " Primitive Settings
-
 set nocompatible
 
 set autoindent
@@ -32,6 +31,12 @@ set noswapfile
 set noerrorbells
 
 " Theme
-
 colorscheme onedark
 hi Normal guibg=NONE ctermbg=NONE
+
+" Keybindings
+let mapleader = " " " set leader key to space
+
+nnoremap <leader>nt :Ntree<CR> " open file tree
+nnoremap <leader>ex :Explore<CR> " open current file tree
+nnoremap <leader>re :Rexplore<CR> " return to file tree

@@ -5,6 +5,7 @@ call plug#begin()
   Plug 'jiangmiao/auto-pairs'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'mg979/vim-visual-multi'
 call plug#end()
 
 " auto-pairs
@@ -15,3 +16,8 @@ set laststatus=2  "永远显示状态栏
 let g:airline_powerline_fonts = 1  " 支持 powerline 字体
 let g:airline#extensions#tabline#enabled = 1 " 显示窗口tab和buffer
 let g:airline_theme='onedark'
+
+" vim-visual-multi
+let g:VM_maps = {}
+let g:VM_maps['Execute Config'] = 1
+nmap <A-LeftMouse> <Plug>(VM-Mouse-Cursor)
