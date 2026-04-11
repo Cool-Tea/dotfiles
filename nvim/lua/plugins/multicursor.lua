@@ -2,7 +2,8 @@ return {
   {
     "mg979/vim-visual-multi",
     branch = "master",
-    lazy = false,
+    event = "VeryLazy",
+    -- lazy = false,
     init = function()
       vim.g.VM_maps = {
         ["Mouse Cursor"] = "<A-LeftMouse>"
