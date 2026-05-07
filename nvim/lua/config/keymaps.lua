@@ -9,7 +9,7 @@ vim.keymap.set("n", "<C-_>", "gcc", { desc = "Toggle comment", remap = true })
 vim.keymap.set("v", "<C-_>", "v_gc", { desc = "Toggle comment", remap = true })
 
 -- terminal keymap
-vim.keymap.set("n", "<leader>t", "<Cmd>vsplit term://zsh<CR>", { desc = "Open a terminal" })
+vim.keymap.set("n", "<leader>t", "term://zsh<CR>", { desc = "Open a terminal" })
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Back to buffer mode" })
 -- vim.keymap.set("t", "<leader>bd", "<Cmd>bd!<CR>", { desc = "Close terminal" })
 -- vim.keymap.set("t", "<leader>bn", "<Cmd>bnext<CR>", { desc = "Switch to next buffer" })

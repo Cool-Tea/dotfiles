@@ -5,7 +5,11 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter").install { "lua", "c", "cpp", "markdown" }
+      require("nvim-treesitter").install {
+        "lua",
+        "c", "cpp",
+        "markdown", "typst",
+      }
       vim.api.nvim_create_autocmd("FileType", {
         pattern = { "lua", "c", "cpp", "markdown" },
         callback = function()
