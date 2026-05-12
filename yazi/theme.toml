@@ -3,8 +3,8 @@
 
 # If you want to dynamically override their content based on dark/light mode, you can specify two different flavors
 # for dark and light modes under `[flavor]`, and do so in those flavors instead.
-"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
 
+#:schema https://yazi-rs.github.io/schemas/theme.json
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # : Flavor {{{
@@ -41,6 +41,7 @@ marker_copied   = { fg = "lightgreen",  bg = "lightgreen" }
 marker_cut      = { fg = "lightred",    bg = "lightred" }
 marker_marked   = { fg = "lightcyan",   bg = "lightcyan" }
 marker_selected = { fg = "lightyellow", bg = "lightyellow" }
+marker_symbol   = "│"
 
 # Count
 count_copied   = { fg = "white", bg = "green" }
@@ -206,7 +207,7 @@ inactive = {}
 
 # Icons
 icon_file    = ""
-icon_folder  = ""
+icon_folder  = ""
 icon_command = ""
 
 # : }}}
@@ -272,14 +273,18 @@ dirs  = [
 	{ name = ".npm", text = "", fg = "#03a9f4" },
 	{ name = "Desktop", text = "", fg = "#00bcd4" },
 	{ name = "Development", text = "", fg = "#00bcd4" },
+	{ name = "dev", text = "", fg = "#00bcd4" },
 	{ name = "Documents", text = "", fg = "#00bcd4" },
 	{ name = "Downloads", text = "", fg = "#00bcd4" },
+	{ name = "download", text = "", fg = "#00bcd4" },
 	{ name = "Library", text = "", fg = "#00bcd4" },
 	{ name = "Movies", text = "", fg = "#00bcd4" },
 	{ name = "Music", text = "", fg = "#00bcd4" },
 	{ name = "Pictures", text = "", fg = "#00bcd4" },
+	{ name = "picture", text = "", fg = "#00bcd4" },
 	{ name = "Public", text = "", fg = "#00bcd4" },
 	{ name = "Videos", text = "", fg = "#00bcd4" },
+	{ name = "video", text = "", fg = "#00bcd4" },
 ]
 files = [
 	{ name = ".babelrc", text = "", fg = "#cbcb41" },
@@ -996,6 +1001,7 @@ conds = [
 	{ if = "dummy", text = "", fg = "#f44336" },
 
 	# Fallback
+	{ if = "dir & hovered", text = "", fg = "#03a9f4" },
 	{ if = "dir", text = "", fg = "#03a9f4" },
 	{ if = "exec", text = "", fg = "#8bc34a" },
 	{ if = "!dir", text = "", fg = "#ffffff" },
