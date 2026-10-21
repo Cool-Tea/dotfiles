@@ -8,10 +8,11 @@ return {
       require("nvim-treesitter").install {
         "lua",
         "c", "cpp",
+        "rust",
         "markdown", "typst",
       }
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "lua", "c", "cpp", "markdown" },
+        pattern = { "lua", "c", "cpp", "markdown", "rust" },
         callback = function()
           -- syntax highlighting, provided by Neovim
           vim.treesitter.start()
